@@ -30,7 +30,7 @@ pipeline {
                                   
             }*/
            
-        stage('build') {
+        /*stage('build') {
             steps {
                 script{
                     bat ''' 
@@ -40,7 +40,7 @@ pipeline {
                     
                 }                    
                                   
-            }
+            }/*
             stage('run') {
             steps {
                 script{
