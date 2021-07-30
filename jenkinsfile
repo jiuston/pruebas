@@ -45,7 +45,7 @@ pipeline {
             steps {
                 script{
                     bat ''' 
-                        docker run --name contenedorpruebas -p 8090:8090 proyecto-spring-pruebas:latest
+                        docker run --name contenedorpruebas -p 8888:8888 proyecto-spring-pruebas:latest
  
                     '''
                     }
