@@ -45,7 +45,7 @@ pipeline {
             steps {
                 script{
                     bat ''' 
-                        docker run --name ${name_final} proyecto-spring-pruebas:latest
+                        docker run --name contenedorpruebas proyecto-spring-pruebas:latest
  
                     '''
                     }
