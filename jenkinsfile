@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script{
                     sh ''' 
-                    docker build -t proyecto-spring-pruebas:latest
+                    docker build -t proyecto-spring-pruebas:latest ./
                     '''
                     }
                     
