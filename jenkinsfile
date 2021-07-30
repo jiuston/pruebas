@@ -11,7 +11,7 @@ pipeline {
         name_final = "contenedorpruebas"        
     }
     stages {
-          stage('stop/rm') {
+          /*stage('stop/rm') {
 
            /* when {
                 expression { 
@@ -28,7 +28,7 @@ pipeline {
                     
                 }    */                
                                   
-            }
+            }*/
            
         stage('build') {
             steps {
