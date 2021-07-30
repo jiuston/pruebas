@@ -11,15 +11,15 @@ pipeline {
         name_final = "contenedorpruebas"        
     }
     stages {
-          /*stage('stop/rm') {
+          stage('stop/rm') {
 
-           /* when {
+            when {
                 expression { 
                     DOCKER_EXIST = sh(returnStdout: true, script: 'echo "$(docker ps -q --filter name=${name_final})"').trim()
                     return  DOCKER_EXIST != '' 
                 }
-            }*/
-            /*steps {
+            }
+            steps {
                 script{
                     sh ''' 
                          docker stop ${name_final}
@@ -28,12 +28,12 @@ pipeline {
                     
                 }                   
                                   
-            }*/
+            }
            
         stage('build') {
             steps {
                 script{
-                    sh ''' 
+                    bat ''' 
                     docker build -t proyecto-spring-pruebas:latest ./
                     '''
                     }
@@ -44,7 +44,7 @@ pipeline {
             stage('run') {
             steps {
                 script{
-                    sh ''' 
+                    bat ''' 
                         docker run --name ${name_final} proyecto-spring-pruebas:latest
  
                     '''
